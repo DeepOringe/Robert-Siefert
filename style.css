@@ -1,0 +1,185 @@
+/* Reset & generic styles */
+
+:root{
+	font-size: 16px;
+}
+
+/* Variables */
+:root{
+	--standard-box-shadow: 0px 2px 4px rgba(0, 0, 0, .18);
+	--standard-emphasis: hsl(0, 0, 15%);
+
+	--scarlet: rgba(187, 0, 0, 1);
+	--grey: rgba(51, 51, 51, 1);
+}
+
+*{
+	letter-spacing: 1;
+	line-height: 2;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+	color: var(--grey);
+}
+
+a{
+	text-decoration: none;
+}
+
+h1{
+	color: rgba(0, 0, 0);
+	font-size: 3em;
+	font-size: calc(3em +1vw);
+	font-weight: 600;
+	line-height: 1.1;
+}
+
+h2{
+	color: rgba(0, 0, 0, .9);
+	font-size: 2em;
+	font-size: calc(2em +1vw);
+	font-weight: 600;
+	line-height: 1.2;
+
+	padding-bottom: 1rem;
+}
+
+h3{
+	color: rgba(0, 0, 0, .9);
+	font-size: 1.5em;
+	font-size: calc(1.5em +1vw);
+	font-weight: 600;
+	line-height: 1.3;
+
+}
+
+p{
+	color: rgba(0, 0, 0, .7);
+	color: hsl(0, 0, 37%);
+	font-size: 1em;
+	font-size: calc();
+	font-weight: 400;
+	line-height: 1.6;
+}
+
+li{
+	list-style-type: none;
+	position: relative;
+	
+
+	line-height: 1.6;
+	margin-bottom: 1rem;
+}
+
+/* li:before{
+	content: '';
+	width: 1rem;
+	height: 1rem;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background: url(bullet-icon.svg);
+} */
+
+/* Icons */
+ul.contact h3{
+	display: flex;
+	align-items: baseline;
+  }
+  
+i.contact-icon{
+	width: 1em;
+	height: 1em;
+	margin-right: 1em;
+	  
+	fill: currentColor;
+  }
+  
+  .wiggle:hover .contact-icon{
+	animation-name: wiggle;
+	animation-duration: .15s;
+	animation-direction: alternate;
+	animation-iteration-count: 3;
+	animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes wiggle {
+	from {transform: translateX(-5px);}
+	to {transform: translateX(5px);}
+  }
+  
+
+/* Layout */
+
+body{
+	width: 100%;
+	height: 100vh;
+
+	border-top: 40px solid var(--scarlet);
+	padding-top: 6rem;
+	display: grid;
+	grid-gap: 4rem;
+	grid-template-columns: 2fr 3fr;
+	grid-template-areas: 
+	"headshot header"
+	"gutter curriculum"
+	"footer footer";		
+}
+
+
+
+div.headshot{
+	grid-area: headshot;
+	display: flex;
+	justify-content: center;
+}
+
+div.header{
+	grid-area: header;
+}
+div.curriculum{
+	grid-area: curriculum;
+	border-top: 5px solid var(--grey);
+	margin-right: 4rem;
+}
+div.footer{
+	grid-area: footer;
+	background: var(--grey);
+	border-top: 5px solid var(--scarlet);
+
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+
+div.footer p{
+	color: var(--scarlet);
+}
+
+
+
+h2.tagline{
+	color: var(--scarlet);
+	font-weight: 400;
+
+	padding-bottom: 3rem;
+}
+
+div.img-parent{
+	box-sizing: border-box;
+	flex: 0 1 500px;
+
+  }
+  
+  img{
+	display: block;
+	box-sizing: border-box;
+	width: 100%;
+	border: 5px solid var(--grey);
+  }
+
+  
