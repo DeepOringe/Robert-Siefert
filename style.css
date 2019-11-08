@@ -123,29 +123,50 @@ body{
 	display: grid;
 	grid-gap: 4rem;
 	grid-template-columns: 2fr 3fr;
+	grid-template-rows: 1fr 2fr 1fr; 
 	grid-template-areas: 
 	"headshot header"
 	"gutter curriculum"
 	"footer footer";		
 }
 
+@media only screen and (max-width: 800px){
+	body{
+		grid-template-columns: 1fr;
+		grid-template-areas:
+		"header"
+		"headshot"
+		"curriculum"
+		"footer";
+	}
+}
 
+div.headshot, 
+div.header,
+div.curriculum{
+	padding: 0 4rem 0 4rem;
+}
 
 div.headshot{
 	grid-area: headshot;
 	display: flex;
 	justify-content: center;
+	
 }
 
 div.header{
 	grid-area: header;
 }
+
 div.curriculum{
 	grid-area: curriculum;
+
+	padding-top: 2rem;
 	border-top: 5px solid var(--grey);
-	margin-right: 4rem;
 }
+
 div.footer{
+	min-height: 6rem;
 	grid-area: footer;
 	background: var(--grey);
 	border-top: 5px solid var(--scarlet);
@@ -155,10 +176,11 @@ div.footer{
 	align-items: center;
 }
 
-
 div.footer p{
 	color: var(--scarlet);
 }
+
+
 
 
 
